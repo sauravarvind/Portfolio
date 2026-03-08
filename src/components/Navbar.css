@@ -1,0 +1,131 @@
+.navbar {
+    position: fixed;
+    top: 1.5rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    pointer-events: none;
+    padding: 0 1rem;
+}
+
+.nav-pill {
+    pointer-events: auto;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.04),
+        inset 0 0 0 1px var(--glass-border);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: var(--color-text-main);
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--color-primary);
+}
+
+/* Hamburger button — hidden on desktop */
+.nav-hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-main);
+    padding: 0.4rem;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.nav-hamburger:hover {
+    background: #f3f4f6;
+}
+
+/* Mobile dropdown */
+.nav-mobile-menu {
+    display: none;
+}
+
+/* ─── Mobile breakpoint ─── */
+@media (max-width: 820px) {
+    .navbar {
+        top: 1rem;
+    }
+
+    .nav-pill {
+        padding: 0.6rem 1rem;
+        border-radius: 16px;
+        gap: 0;
+        flex-wrap: wrap;
+        width: calc(100% - 2rem);
+        max-width: 480px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-pill--open {
+        border-radius: 16px;
+    }
+
+    /* Hide desktop links */
+    .nav-links {
+        display: none;
+    }
+
+    /* Show hamburger */
+    .nav-hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Mobile menu dropdown */
+    .nav-mobile-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        padding: 0.75rem 0 0.25rem;
+        border-top: 1px solid #f3f4f6;
+        margin-top: 0.25rem;
+    }
+
+    .nav-mobile-menu li {
+        width: 100%;
+    }
+
+    .nav-mobile-menu .nav-link {
+        display: block;
+        padding: 0.6rem 0.5rem;
+        font-size: 1rem;
+        border-radius: 8px;
+    }
+
+    .nav-mobile-menu .nav-link:hover {
+        background: #f9fafb;
+    }
+}

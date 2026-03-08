@@ -1,0 +1,232 @@
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 9rem;
+    align-items: center;
+}
+
+.about-heading {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-main);
+}
+
+.approach-list {
+    margin: 2rem 0;
+}
+
+.approach-list h4 {
+    margin-bottom: 1rem;
+    color: var(--color-text-main);
+}
+
+.approach-list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    list-style-type: disc;
+}
+
+.approach-list li {
+    display: list-item;
+    font-weight: 500;
+    color: var(--color-text-main);
+}
+
+.about-footer-text {
+    font-style: italic;
+    padding-left: 1rem;
+    border-left: 3px solid var(--color-primary);
+    margin-top: 2rem;
+}
+
+/* Dynamic Parallax Pills Graphic */
+.about-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 480px;
+}
+
+.dynamic-pills-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Abstract Graphic */
+.abstract-graphic {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(59, 40, 204, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-1 {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(244, 236, 255, 0.5) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.circle-2 {
+    width: 65%;
+    height: 65%;
+    background-color: var(--color-bg-accent);
+    border: none;
+}
+
+.circle-3 {
+    width: 30%;
+    height: 30%;
+    background-color: var(--color-primary);
+    box-shadow: 0 0 40px rgba(50, 41, 227, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.core-dot {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.paralax-pill {
+    position: absolute;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.05),
+        inset 0 0 0 1px var(--glass-border);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--color-text-main);
+    white-space: nowrap;
+    z-index: 5;
+}
+
+/* Positioning scattered pills */
+.pill-a {
+    top: 5%;
+    left: -5%;
+    box-shadow: 0 10px 30px rgba(50, 41, 227, 0.15);
+}
+
+/* Validated stratergy */
+.pill-b {
+    top: 15%;
+    right: -5%;
+}
+
+/* User research */
+.pill-c {
+    top: 45%;
+    left: -15%;
+}
+
+/* Clear deisgn */
+.pill-d {
+    bottom: 10%;
+    left: 20%;
+}
+
+/* Business goals */
+.pill-e {
+    bottom: 25%;
+    right: -10%;
+}
+
+/* User needs */
+
+/* Floating pointers */
+.floating-cursor {
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.floating-cursor.top-left {
+    top: 15%;
+    left: 10%;
+    transform: scaleX(-1);
+}
+
+.floating-cursor.bottom-right {
+    bottom: -5%;
+    right: 5%;
+    transform: rotate(15deg);
+}
+
+@media (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+
+    .about-visual {
+        margin-top: 0;
+        height: 300px;
+        width: 100%;
+        overflow: visible;
+    }
+
+    .dynamic-pills-container {
+        overflow: visible;
+    }
+
+    .abstract-graphic {
+        width: 220px;
+        height: 220px;
+    }
+
+    .paralax-pill {
+        font-size: 0.72rem;
+        padding: 0.45rem 0.85rem;
+    }
+
+    /* Re-anchor pills so they stay inside the visual frame */
+    .pill-a {
+        top: 2%;
+        left: 2%;
+    }
+
+    .pill-b {
+        top: 12%;
+        right: 2%;
+    }
+
+    .pill-c {
+        top: 45%;
+        left: 2%;
+    }
+
+    .pill-d {
+        bottom: 8%;
+        left: 18%;
+    }
+
+    .pill-e {
+        bottom: 24%;
+        right: 2%;
+    }
+}
