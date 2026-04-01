@@ -1,5 +1,5 @@
 .services-section {
-    background: #ffffff;
+    background: var(--color-bg-main);
     padding: 100px 0;
     position: relative;
     overflow: hidden;
@@ -39,7 +39,7 @@
     font-family: var(--font-heading);
     font-size: 1.1rem;
     font-weight: 500;
-    color: #6b7280;
+    color: var(--color-text-muted);
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
@@ -61,7 +61,7 @@
 }
 
 .service-btn:hover {
-    color: #111827;
+    color: var(--color-text-main);
 }
 
 .service-btn.active {
@@ -79,7 +79,7 @@
 
 /* ── Right Content Panel ── */
 .services-content-panel {
-    background: rgba(255, 255, 255, 0.7);
+    background: var(--glass-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: 32px;
@@ -91,7 +91,7 @@
 .services-visual-display {
     width: 100%;
     height: 320px;
-    background: #fcfcfc;
+    background: var(--color-bg-alt);
     position: relative;
     border-bottom: 1px solid rgba(0, 0, 0, 0.03);
     overflow: hidden;
@@ -115,7 +115,7 @@
     font-family: var(--font-heading);
     font-size: 1.8rem;
     font-weight: 800;
-    color: #111827;
+    color: var(--color-text-main);
     margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
 }
@@ -127,7 +127,7 @@
 .service-content-desc {
     font-family: var(--font-body);
     font-size: 1.15rem;
-    color: #4b5563;
+    color: var(--color-text-muted);
     line-height: 1.7;
     margin-bottom: 2.5rem;
 }
@@ -158,7 +158,7 @@
 .meta-text {
     font-family: var(--font-body);
     font-size: 1rem;
-    color: #111827;
+    color: var(--color-text-main);
     font-weight: 500;
 }
 

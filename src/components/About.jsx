@@ -29,14 +29,14 @@ const About = () => {
                             <span>/ Overview</span>
                         </div>
 
-                        <h3 className="about-heading" style={{ color: 'black' }}>Design With Purpose. Not Just Aesthetics.</h3>
-                        <p style={{ color: '#555555', marginBottom: '1.5rem', lineHeight: '1.6' }}>
+                        <h3 className="about-heading" style={{ color: 'var(--color-text-main)' }}>Design With Purpose. Not Just Aesthetics.</h3>
+                        <p style={{ color: 'var(--color-text-muted)', marginBottom: '1.5rem', lineHeight: '1.6' }}>
                             I’m a Graphic Designer, UI & UX Designer & Marketing/Brand strategist with 4+ years of experience creating brand identities, digital products, and marketing assets that don’t just look good — they perform.
                         </p>
 
                         <div className="approach-list">
-                            <h4 style={{ color: 'black', marginBottom: '0.8rem' }}>My approach blends:</h4>
-                            <ul style={{ color: '#555555', paddingLeft: '1.25rem' }}>
+                            <h4 style={{ color: 'var(--color-text-main)', marginBottom: '0.8rem' }}>My approach blends:</h4>
+                            <ul style={{ color: 'var(--color-text-muted)', paddingLeft: '1.25rem' }}>
                                 <li>Strategic thinking</li>
                                 <li>User-focused design</li>
                                 <li>Technical understanding (React & Front-End)</li>
@@ -44,7 +44,7 @@ const About = () => {
                             </ul>
                         </div>
 
-                        <p style={{ color: '#555555', marginTop: '1.5rem', lineHeight: '1.6' }}>
+                        <p style={{ color: 'var(--color-text-muted)', marginTop: '1.5rem', lineHeight: '1.6' }}>
                             I work closely with founders, product teams, and growing businesses to build clarity in their brand and confidence in their product.
                         </p>
                     </motion.div>

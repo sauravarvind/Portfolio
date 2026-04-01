@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Globe, Clock, Zap, Target, TrendingDown, TrendingUp } from 'lucide-react';
+import { ChevronDown, Globe, Clock, Zap, Target, TrendingDown, TrendingUp, Info } from 'lucide-react';
 import './Pricing.css';
 
 const Pricing = () => {
@@ -15,18 +15,20 @@ const Pricing = () => {
         EUR: { symbol: '€', rate: 0.92 }
     };
 
-    const baseHourly = 50;
+    const baseHourly = 20;
     const currentRate = (baseHourly * rates[currency].rate).toFixed(0);
     const symbol = rates[currency].symbol;
 
     const estimatedHours = billingCycle === 'monthly' ? 40 : 400;
-    const totalPrice = (currentRate * estimatedHours).toLocaleString();
+    const rawTotalPrice = currentRate * estimatedHours;
+    const discountFactor = billingCycle === 'annual' ? 0.9 : 1;
+    const totalPrice = (rawTotalPrice * discountFactor).toLocaleString();
 
     // Data for the comparison bar chart
     const comparisonData = [
         { name: 'Big Agencies', value: 150, color: '#94a3b8' },
-        { name: 'Top Freelancers', value: 100, color: '#cbd5e1' },
-        { name: 'Me (Saurav)', value: 50, color: 'var(--color-primary)' },
+        { name: 'Other Freelancers', value: 100, color: '#cbd5e1' },
+        { name: 'Me (Saurav)', value: 20, color: 'var(--color-primary)' },
     ];
 
     return (
@@ -52,10 +54,10 @@ const Pricing = () => {
                                 transition={{ type: "spring", stiffness: 500, damping: 30 }}
                             />
                         </button>
-                        <span className={billingCycle === 'annual' ? 'active' : ''}>Annual <span className="discount-badge">-15%</span></span>
+                        <span className={billingCycle === 'annual' ? 'active' : ''}>Annual <span className="discount-badge">-10%</span></span>
                     </div>
                     <p className="startup-note">
-                        <Target size={14} /> Negotiable or starting points available for high-potential startups
+                        <Info size={16} /> The pricing listed below is for monthly and annual contracts. Single contracts please do reach me
                     </p>
                 </div>
 
@@ -164,9 +166,9 @@ const Pricing = () => {
                                     <div key={item.name} className="bar-row">
                                         <div className="bar-label">
                                             {item.name}
-                                            {item.name.includes('Big') && <span className="reaction-pill overhead">😱 High Overhead <TrendingDown size={12} className="text-red" /></span>}
-                                            {item.name.includes('Top') && <span className="reaction-pill overhead">💸 Premium Fee <TrendingDown size={12} className="text-red" /></span>}
-                                            {item.name.includes('Me') && <span className="reaction-pill savings">🚀 Best Value <TrendingUp size={12} strokeWidth={3} className="text-green" /></span>}
+                                            {item.name.includes('Big') && <span className="reaction-pill overhead">High Overhead <TrendingDown size={12} className="text-red" /></span>}
+                                            {item.name.includes('Other') && <span className="reaction-pill overhead">Premium Fee <TrendingDown size={12} className="text-red" /></span>}
+                                            {item.name.includes('Me') && <span className="reaction-pill savings">Best Value <TrendingUp size={12} strokeWidth={3} className="text-green" /></span>}
                                         </div>
                                         <div className="bar-wrapper">
                                             <motion.div
@@ -195,7 +197,7 @@ const Pricing = () => {
                                     transition={{ repeat: Infinity, duration: 4, ease: "easeInOut", delay: 1 }}
                                     className="reaction-floating pill-white"
                                 >
-                                    🎯 Value Focused
+                                    Value Focused
                                 </motion.div>
                             </div>
 

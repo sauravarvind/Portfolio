@@ -8,6 +8,7 @@ import Testimonials from './components/Testimonials';
 import Pricing from './components/Pricing';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
+import ThemeToggle from './components/ThemeToggle';
 import './App.css';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Pricing />
         <CTA />
       </main>
+      <ThemeToggle />
       <Footer />
     </div>
   );
