@@ -65,8 +65,8 @@ const Hero = () => {
                         className="hero-avatar-wrapper"
                     >
                         <div className="hero-avatar">
-                            {/* Using a placeholder since user provided a screenshot of the design */}
-                            <div className="avatar-placeholder"></div>
+                            {/* Using the hero image from public folder */}
+                            <img src="/hero-image.png" alt="Saurav" className="hero-avatar-image" />
                             <div className="tooltip">Let's Connect!</div>
                             <motion.div
                                 className="hero-mouse-cursor"
