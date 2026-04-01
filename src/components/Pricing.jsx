@@ -143,8 +143,8 @@ const Pricing = () => {
                         </div>
 
                         <div className="pricing-actions">
-                            <a href="#contact" className="btn btn-primary">Book a discovery call</a>
-                            <a href="#contact" className="btn btn-outline" style={{ display: 'none' }}>Consulting</a>
+                            <a href="https://calendly.com/saurav-imagines/30min?back=1&month=2026-04" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book a discovery call</a>
+                            <a href="https://calendly.com/saurav-imagines/30min?back=1&month=2026-04" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ display: 'none' }}>Consulting</a>
                         </div>
                     </motion.div>
 

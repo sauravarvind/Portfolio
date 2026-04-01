@@ -14,11 +14,11 @@ const CTA = () => {
                     className="cta-content"
                 >
                     <h2>
-                        Ready to start? <a href="#" className="text-primary hover-underline">Book a 20-minute<br />discovery call</a> or <a href="#" className="text-primary hover-underline">Collaborate on a pilot.</a>
+                        Ready to start? <a href="https://calendly.com/saurav-imagines/30min?back=1&month=2026-04" target="_blank" rel="noopener noreferrer" className="text-primary hover-underline">Book a 20-minute<br />discovery call</a> or <a href="https://www.linkedin.com/in/saurav-arvind/" target="_blank" rel="noopener noreferrer" className="text-primary hover-underline">Collaborate on a pilot.</a>
                     </h2>
 
                     <div className="cta-action">
-                        <a href="#" className="btn btn-primary btn-lg">Start a Project</a>
+                        <a href="mailto:saurav.imagines@gmail.com" className="btn btn-primary btn-lg">Start a Project</a>
                     </div>
                 </motion.div>
 

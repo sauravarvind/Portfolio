@@ -54,7 +54,7 @@ const Navbar = () => {
               </a>
             </li>
           ))}
-          <li><a href="#contact" className="btn btn-primary nav-action-btn" onClick={close}>Book a call</a></li>
+          <li><a href="https://calendly.com/saurav-imagines/30min?back=1&month=2026-04" target="_blank" rel="noopener noreferrer" className="btn btn-primary nav-action-btn" onClick={close}>Book a call</a></li>
         </ul>
 
         {/* Hamburger toggle */}
@@ -80,7 +80,7 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <li><a href="#contact" className="btn btn-primary" style={{ width: '100%', textAlign: 'center' }} onClick={close}>Book a call</a></li>
+            <li><a href="https://calendly.com/saurav-imagines/30min?back=1&month=2026-04" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: '100%', textAlign: 'center' }} onClick={close}>Book a call</a></li>
           </ul>
         )}
       </div>

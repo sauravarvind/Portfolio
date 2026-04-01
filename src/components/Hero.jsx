@@ -111,7 +111,7 @@ const Hero = () => {
                         </p>
 
                         <div className="hero-actions">
-                            <a href="#contact" className="btn btn-primary">Book a 20-min call</a>
+                            <a href="https://calendly.com/saurav-imagines/30min?back=1&month=2026-04" target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book a 20-min call</a>
                             <div className="status-pill flex items-center gap-2">
                                 <span className="status-dot"></span> Available for new projects
                             </div>
